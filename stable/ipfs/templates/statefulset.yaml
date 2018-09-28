@@ -26,6 +26,11 @@ spec:
       containers:
       - name: {{ .Chart.Name }}
         image: {{ .Values.image }}
+        env:
+        {{- range $key, $value := .Values.env }}
+        - name: "{{ $key }}"
+          value: "{{ $value }}"
+        {{- end }}
         ports:
         - containerPort: 5001
           name: api

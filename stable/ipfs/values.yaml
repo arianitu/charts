@@ -7,6 +7,9 @@ service:
 
 resources: {}
 
+# env:
+  #LIBP2P_FORCE_PNET: 1
+  
 persistence:
   enabled: true
   ## ipfs data Persistent Volume Storage Class
