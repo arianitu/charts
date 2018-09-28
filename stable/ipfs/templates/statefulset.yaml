@@ -31,6 +31,8 @@ spec:
           name: api
         - containerPort: 8080
           name: gateway
+        - containerPort: 4001
+          name: swarm
         volumeMounts:
           - name: ipfs-storage
             mountPath: /data/ipfs

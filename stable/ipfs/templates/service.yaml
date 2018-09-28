@@ -17,6 +17,9 @@ spec:
   - port: 8080
     targetPort: 8080
     name: gateway
+  - port: 4001
+    targetPort: 4001
+    name: swarm
   selector:
     app: {{ template "ipfs.name" . }}
     release: {{ .Release.Name }}
